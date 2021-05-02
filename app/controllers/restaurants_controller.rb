@@ -8,7 +8,6 @@ class RestaurantsController < ApplicationController
   
     # GET /restaurants/1 or /restaurants/1.json
     def show
-      @restaurant
     end
   
     # GET /restaurants/new
@@ -37,6 +36,7 @@ class RestaurantsController < ApplicationController
     # DELETE /restaurants/1 or /restaurants/1.json
     def destroy
       @restaurant.destroy
+      redirect_to restaurants_path
     end
   
     private
